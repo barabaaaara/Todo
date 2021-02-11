@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		545D4B1F66C5F6D75F505063 /* Pods_Todo_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC29901027CF7ABA92282EE2 /* Pods_Todo_TodoUITests.framework */; };
 		9444EFAB25D3D124005E32BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFAA25D3D124005E32BE /* AppDelegate.swift */; };
-		9444EFAF25D3D124005E32BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFAE25D3D124005E32BE /* ViewController.swift */; };
 		9444EFB425D3D128005E32BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9444EFB325D3D128005E32BE /* Assets.xcassets */; };
 		9444EFB725D3D128005E32BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9444EFB525D3D128005E32BE /* LaunchScreen.storyboard */; };
 		9444EFC225D3D128005E32BE /* TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFC125D3D128005E32BE /* TodoTests.swift */; };
 		9444EFCD25D3D128005E32BE /* TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFCC25D3D128005E32BE /* TodoUITests.swift */; };
+		9444EFF525D40536005E32BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFF325D40536005E32BE /* ViewController.swift */; };
+		9444EFF625D40536005E32BE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9444EFF425D40536005E32BE /* ViewController.xib */; };
+		9444EFFC25D40725005E32BE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444EFFA25D40725005E32BE /* TableViewCell.swift */; };
+		9444EFFD25D40725005E32BE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9444EFFB25D40725005E32BE /* TableViewCell.xib */; };
+		9444F00825D40960005E32BE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444F00625D40960005E32BE /* AddViewController.swift */; };
+		9444F00925D40960005E32BE /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9444F00725D40960005E32BE /* AddViewController.xib */; };
+		9444F00F25D409F5005E32BE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444F00D25D409F5005E32BE /* DetailViewController.swift */; };
+		9444F01025D409F5005E32BE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9444F00E25D409F5005E32BE /* DetailViewController.xib */; };
 		9A2E4DDC0A380BDFEC8DB318 /* Pods_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16086F14986CE8DA6D8C4892 /* Pods_TodoTests.framework */; };
 		EB3447A0110A0AA900E092D9 /* Pods_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A509686B621262160D58C /* Pods_Todo.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +50,6 @@
 		8C2FB5EB25548E67AC6CDC98 /* Pods-Todo-TodoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo-TodoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Todo-TodoUITests/Pods-Todo-TodoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9444EFA725D3D124005E32BE /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444EFAA25D3D124005E32BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9444EFAE25D3D124005E32BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9444EFB325D3D128005E32BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9444EFB625D3D128005E32BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9444EFB825D3D128005E32BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +59,14 @@
 		9444EFC825D3D128005E32BE /* TodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444EFCC25D3D128005E32BE /* TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoUITests.swift; sourceTree = "<group>"; };
 		9444EFCE25D3D128005E32BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9444EFF325D40536005E32BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9444EFF425D40536005E32BE /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		9444EFFA25D40725005E32BE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9444EFFB25D40725005E32BE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9444F00625D40960005E32BE /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		9444F00725D40960005E32BE /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		9444F00D25D409F5005E32BE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9444F00E25D409F5005E32BE /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		97E03F2F1E85DF4CA15707EA /* Pods-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.release.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		B51E75F0C9811CAF68382C20 /* Pods-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo.debug.xcconfig"; path = "Target Support Files/Pods-Todo/Pods-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD6BB526FDDA19E48721F7BD /* Pods-Todo-TodoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todo-TodoUITests.release.xcconfig"; path = "Target Support Files/Pods-Todo-TodoUITests/Pods-Todo-TodoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,10 +150,17 @@
 			isa = PBXGroup;
 			children = (
 				9444EFAA25D3D124005E32BE /* AppDelegate.swift */,
-				9444EFAE25D3D124005E32BE /* ViewController.swift */,
 				9444EFB325D3D128005E32BE /* Assets.xcassets */,
 				9444EFB525D3D128005E32BE /* LaunchScreen.storyboard */,
 				9444EFB825D3D128005E32BE /* Info.plist */,
+				9444EFF325D40536005E32BE /* ViewController.swift */,
+				9444EFF425D40536005E32BE /* ViewController.xib */,
+				9444EFFA25D40725005E32BE /* TableViewCell.swift */,
+				9444EFFB25D40725005E32BE /* TableViewCell.xib */,
+				9444F00625D40960005E32BE /* AddViewController.swift */,
+				9444F00725D40960005E32BE /* AddViewController.xib */,
+				9444F00D25D409F5005E32BE /* DetailViewController.swift */,
+				9444F00E25D409F5005E32BE /* DetailViewController.xib */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -270,7 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9444F00925D40960005E32BE /* AddViewController.xib in Resources */,
 				9444EFB725D3D128005E32BE /* LaunchScreen.storyboard in Resources */,
+				9444F01025D409F5005E32BE /* DetailViewController.xib in Resources */,
+				9444EFFD25D40725005E32BE /* TableViewCell.xib in Resources */,
+				9444EFF625D40536005E32BE /* ViewController.xib in Resources */,
 				9444EFB425D3D128005E32BE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +424,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9444EFAF25D3D124005E32BE /* ViewController.swift in Sources */,
+				9444EFFC25D40725005E32BE /* TableViewCell.swift in Sources */,
+				9444EFF525D40536005E32BE /* ViewController.swift in Sources */,
+				9444F00F25D409F5005E32BE /* DetailViewController.swift in Sources */,
+				9444F00825D40960005E32BE /* AddViewController.swift in Sources */,
 				9444EFAB25D3D124005E32BE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
