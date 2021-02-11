@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import FloatingPanel
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FloatingPanelControllerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TODO.count
     }
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var TODO = ["勉強する","起きる","ご飯作る",]
     var addBarButtonItem: UIBarButtonItem!
+    var fpc = FloatingPanelController()
     
     
     override func viewDidLoad() {
@@ -35,6 +37,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
         //Registers a class for use in creating new table cells.
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil),forCellReuseIdentifier:"TableViewCell")
+        fpc.delegate = self
         
         self .navigationItem.title = "メイン"
         tableView.separatorStyle = .none
@@ -42,13 +45,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
  
     @objc func addBarButtonTapped(_ sender: UIBarButtonItem) {
-        let vc = AddViewController()
-        //The transition style to use when presenting the view controller.
-        vc.modalTransitionStyle = .crossDissolve
-        //The presentation style for modal view controllers.
-        vc.modalPresentationStyle = .overCurrentContext
-        //Presents a view controller modally.
-        self.present(vc, animated: true, completion: nil)
+        let contentVC = AddViewController()
+        fpc.set(contentViewController: contentVC)
+        fpc.layout = MyFloatingPanelLayout()
+        fpc.isRemovalInteractionEnabled = true
+        self.present(fpc, animated: true, completion: nil)
     }
     
     //セルの編集許可
@@ -87,3 +88,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      */
     
 }
+class MyFloatingPanelLayout: FloatingPanelLayout {
+    let position: FloatingPanelPosition = .bottom
+    let initialState: FloatingPanelState = .tip
+    var anchors: [FloatingPanelState: FloatingPanelLayoutAnchoring] {
+      return [
+        .tip: FloatingPanelLayoutAnchor(absoluteInset: 180.0, edge: .bottom, referenceGuide: .safeArea),
+      ]
+    }
+  }

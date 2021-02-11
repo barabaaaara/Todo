@@ -8,27 +8,50 @@
 import UIKit
 import FloatingPanel
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController,UITextFieldDelegate {
     //
     var fpc = FloatingPanelController()
-    //
+    var toolBar:UIToolbar!
+    var datePicker: UIDatePicker = UIDatePicker()
+    
+    @IBOutlet weak var deadLineTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contentVC = ContentViewController()
-        fpc.set(contentViewController: contentVC)
-        fpc.addPanel(toParent: self)
+        deadLineTextField.delegate = self
+        setupToolbar()
         
     }
-    //
-    
-    // Do any additional setup after loading the view.
-    
-    class ContentViewController: UIViewController {
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            view.backgroundColor = .green
-        }
+    func setupToolbar() {
+        //datepicker上のtoolbarのdoneボタン
+        toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        let toolBarBtn = UIBarButtonItem(title: "DONE", style: .plain, target: self, action: #selector(doneBtn))
+        toolBar.items = [toolBarBtn]
+        deadLineTextField.inputAccessoryView = toolBar
     }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        let datePickerView:UIDatePicker = UIDatePicker()
+//        datePickerView.datePickerMode = UIDatePicker.Mode.date
+        textField.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControl.Event.valueChanged)
+    }
+
+        //datepickerが選択されたらtextfieldに表示
+    @objc func datePickerValueChanged(sender:UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .long
+        dateFormatter.locale  = NSLocale(localeIdentifier: "ja_JP") as Locale?
+        deadLineTextField.text = dateFormatter.string(from: datePicker.date)
+    }
+
+    //toolbarのdoneボタン
+    @objc func doneBtn(){
+        deadLineTextField.resignFirstResponder()
+    }
+
+
 
 
     /*
@@ -43,3 +66,5 @@ class AddViewController: UIViewController {
 
 
 }
+
+//ボタンを押す→
