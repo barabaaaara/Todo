@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="Todo" customModuleProvider="target">
             <connections>
                 <outlet property="deadLineTextField" destination="jCF-qa-1rd" id="zuU-9w-usz"/>
+                <outlet property="taskDetail" destination="QJ0-ey-98t" id="wbZ-SO-QV1"/>
+                <outlet property="taskTitle" destination="LJa-aQ-AQn" id="H7n-8W-aHh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -63,20 +66,40 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UN-yl-NQa">
+                    <rect key="frame" x="0.0" y="217.5" width="414" height="30"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="saveBottonTapped:" destination="-1" eventType="touchUpInside" id="slW-yw-Zom"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="9UN-yl-NQa" firstAttribute="top" secondItem="poQ-F8-AJk" secondAttribute="bottom" constant="20" id="3at-Bc-J1I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9UN-yl-NQa" secondAttribute="trailing" id="4Xq-F2-bLv"/>
                 <constraint firstItem="poQ-F8-AJk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="Gcj-CW-EX5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9UN-yl-NQa" secondAttribute="trailing" constant="100" id="N7W-2D-aF2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9UN-yl-NQa" secondAttribute="trailing" id="NdP-ad-r9Z"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="poQ-F8-AJk" secondAttribute="trailing" constant="5" id="Stx-nv-Y6z"/>
+                <constraint firstItem="9UN-yl-NQa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TDf-ba-dAu"/>
                 <constraint firstItem="poQ-F8-AJk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="u9j-RD-hAr"/>
+                <constraint firstItem="9UN-yl-NQa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zj9-F6-sCj"/>
             </constraints>
-            <point key="canvasLocation" x="-110" y="-162"/>
+            <point key="canvasLocation" x="-110.14492753623189" y="-162.05357142857142"/>
         </view>
     </objects>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,4 +21,9 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    @IBAction func (_ sender: UIBarButtonItem) {
+//        let detailVC = DetailViewController()
+//        detailVC.modalPresentationStyle = .fullScreen // ★この行追加
+//        self.present(detailVC, animated: true, completion: nil)
+//    }
 }

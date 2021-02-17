@@ -7,6 +7,7 @@ target 'Todo' do
 
   # Pods for Todo
   pod 'FloatingPanel'
+  pod 'RealmSwift'
   target 'TodoTests' do
     inherit! :search_paths
     # Pods for testing
